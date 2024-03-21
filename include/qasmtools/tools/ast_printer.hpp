@@ -208,7 +208,7 @@ class ASTPrinter final : public ast::Visitor {
     }
 };
 
-void print_tree(ast::ASTNode& node, std::ostream& os = std::cout) {
+inline void print_tree(ast::ASTNode& node, std::ostream& os = std::cout) {
     ASTPrinter printer(os);
     node.accept(printer);
 }
